@@ -22,7 +22,7 @@ app.get('/quote', (req, res) => {
 });
 app.post('/quote', (req, res) => {
     console.log('in POST hit for /quote route:', req.body);
-    quotesArray.push(req.body.author, req.body.quote);
+    quotesArray.push(req.body);
     //quotesArray.push(req.body.quote);
     res.sendStatus(200);
 }); // end guests POST
